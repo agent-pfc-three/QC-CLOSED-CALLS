@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abogada Francis Gissel Aguilar Cruz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background-color: #004085;
+      color: white;
+      position: relative;
+    }
+
+    header h1 {
+      margin-top: 0.3rem;
+      font-size: 2rem;
+      color: #ffeb3b;
+    }
+
+    /* Frase fija debajo del título */
+    .frase-latin {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #ffe082;
+      margin-top: 0.3rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .frase-traduccion {
+      font-size: 0.95rem;
+      color: #ffcc80;
+    }
+
+    /* Frase animada con brillo */
+    .frase-animada {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #dcdcdc;
+      margin-top: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.8s ease, transform 1.8s ease, text-shadow 1.8s ease, color 1.8s ease;
+    }
+
+    .frase-animada.visible {
+      opacity: 1;
+      transform: translateY(0);
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffea00;
+    }
+
+    .frase-traduccion-animada {
+      font-size: 1rem;
+      color: #e0e0e0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.8s ease, transform 1.8s ease, text-shadow 1.8s ease, color 1.8s ease;
+    }
+
+    .frase-traduccion-animada.visible {
+      opacity: 1;
+      transform: translateY(0);
+      color: #ffe599;
+      text-shadow: 0 0 8px #ffe599, 0 0 15px #ffeb99;
+    }
+
+    section {
+      padding: 1.5rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .servicios, .extras {
+      background-color: white;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .servicios:hover, .extras:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    h2 {
+      color: #004085;
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    .restricciones {
+      background-color: #fff3cd;
+      padding: 0.6rem;
+      border-left: 5px solid #ff9800;
+      margin-top: 0.8rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      margin-top: 0.8rem;
+    }
+
+    .whatsapp:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .imagen-final {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #004085;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Abogada Francis Gissel Aguilar Cruz</h1>
+
+    <div class="frase-latin">Verba volant, scripta manent</div>
+    <div class="frase-traduccion">"Las palabras vuelan, los escritos permanecen"</div>
+
+    <div class="frase-animada" id="fraseAnimada">Fiat justitia ruat caelum</div>
+    <div class="frase-traduccion-animada" id="traduccionAnimada">"Que se haga justicia, aunque caigan los cielos"</div>
+  </header>
+
+  <section class="servicios">
+    <h2>Servicios Gratuitos Temporales</h2>
+    <ul>
+      <li>Divorcios por mutuo consentimiento</li>
+      <li>Demandas de alimentos</li>
+      <li>Denuncias menores</li>
+      <li>Incumplimiento de pago en el juzgado de paz</li>
+      <li>Demandas por accidentes de tránsito sin acuerdo</li>
+      <li>Casos de violencia doméstica</li>
+    </ul>
+    <div class="restricciones">
+      ⚖ Restricciones aplican
+    </div>
+  </section>
+
+  <section class="extras">
+    <h2>Facilitaciones y Servicios Notariales</h2>
+    <p>Contamos con más de <strong>10 años de experiencia</strong> ofreciendo servicios legales y notariales de la más alta calidad.</p>
+    <p>Facilitamos trámites como:</p>
+    <ul>
+      <li>Autenticaciones</li>
+      <li>Compraventas</li>
+      <li>Traspasos</li>
+    </ul>
+    <p>Estos servicios <strong>no están incluidos</strong> en la oferta temporal de asesorías gratuitas.</p>
+  </section>
+
+  <section style="text-align:center;">
+    <a class="whatsapp" href="https://wa.me/50432264580?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank">📞 Contactar por WhatsApp</a>
+  </section>
+
+  <!-- Imagen al final -->
+  <img src="imagenes/temis.png" alt="Diosa Temis" class="imagen-final">
+
+  <footer>
+    &copy; 2025 Abogada Francis Gissel Aguilar Cruz - Todos los derechos reservados
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('fraseAnimada').classList.add('visible');
+        document.getElementById('traduccionAnimada').classList.add('visible');
+      }, 500);
+    });
+  </script>
+
+</body>
+</html>
